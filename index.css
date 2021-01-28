@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body {
+   background: #FFAFBD;
+   background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  
+   background: linear-gradient(to right, #ffc3a0, #FFAFBD); 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .iconoHermoso .icono{
+    width: 400px;
+}
+header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 120px;
+    color: #FFAFBD;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    position: absolute;
+    top: 210px;
+}
+
+form {
+    margin-top: 100px;
+}
+form .buscador {
+    font-size: 30px;
+    font-family:'Ubuntu', sans-serif;
+    padding: 10px;
+    outline: none;
+    border-width: 5px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #40e09d;
+    animation-name: borderColor;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes borderColor {
+    0%   {border-color: #40e09d;}
+    50%  {border-color: #eba045;}
+    100%  {border-color: #f75764;}
+  }
+form .botonBusqueda {
+    margin-left: 10px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 5px;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    color: #FFAFBD;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    outline: none;
+    transition: all .2s ease-in-out;
+
+}
+form .botonBusqueda:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+.resultados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+.resultados .letra {
+    text-align: center;
+    max-width: 50%;
+}
+/* RESPONSIVE D: */
+@media (max-width: 575.98px)and (orientation:portrait) {
+    header .iconoHermoso .icono{
+        margin-top: -200px;
+        width: 200px;
+    }
+    header h1 {
+        font-size: 50px;
+        position: absolute;
+        top: 180px;
+    }
+    form {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    form .buscador {
+        font-size: 16px;
+        padding: 10px;
+        border-width: 5px;
+        border-radius: 25px;
+    }
+    form .botonBusqueda {
+        margin-left: 10px;
+        padding: 5px;
+        font-size: 40px;
+    }
+    .resultados {
+    margin-top: -300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.8;}
+    audio{
+        width: 200px;
+        height: 16px;
+    }
+}
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+    body{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:row;
+     }
+    header .iconoHermoso .icono{
+        width: 200px;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+    header h1 {
+        font-size: 50px;
+        position: absolute;
+        top: 40px;
+    }
+    form {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: -500px;
+    }
+    form .buscador {
+        font-size: 16px;
+        padding: 10px;
+        border-width: 5px;
+        border-radius: 25px;
+    }
+    form .botonBusqueda {
+        margin-left: 10px;
+        padding: 5px;
+        font-size: 40px;
+    }
+    .resultados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.8;}
+    audio{
+        width: 200px;
+        height: 16px;
+    }
+}
